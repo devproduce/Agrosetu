@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "845042133047",
+    "project_id": "signflutter-22543",
+    "storage_bucket": "signflutter-22543.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845042133047:android:fe2d8c122d23952be9f7b2",
+        "android_client_info": {
+          "package_name": "com.example.agrosetu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845042133047-5knvq5pfvkbu02irk2md7vhe2etnnqo5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC1zSorC2OapDj7hlsEwMZLRW-Y5jBzvQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845042133047-5knvq5pfvkbu02irk2md7vhe2etnnqo5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
