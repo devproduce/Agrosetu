@@ -11,7 +11,7 @@ class HomeScreenDrawer extends StatefulWidget {
 class _HomeScreenDrawerState extends State<HomeScreenDrawer> {
   @override
   Widget build(BuildContext context) {
-    final backgroundImage = 'assets/images/farmer.png';
+    const backgroundImage = 'assets/images/farmer.png';
 
     return Drawer(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
@@ -22,7 +22,7 @@ class _HomeScreenDrawerState extends State<HomeScreenDrawer> {
             children: [
               Container(
                 height: 200, // Height of the UserAccountsDrawerHeader
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(backgroundImage),
                     fit: BoxFit.cover,
@@ -57,11 +57,11 @@ class _HomeScreenDrawerState extends State<HomeScreenDrawer> {
                 currentAccountPicture: GestureDetector(
                   child: CircleAvatar(
                     backgroundColor: Theme.of(context).colorScheme.secondary,
-                    backgroundImage: AssetImage(backgroundImage),
+                    backgroundImage: const AssetImage(backgroundImage),
                   ),
                   onTap: () {},
                 ),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.transparent, // Transparent to show the blurred image
                 ),
               ),

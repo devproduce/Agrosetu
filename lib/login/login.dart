@@ -2,6 +2,8 @@ import 'package:agrosetu/login/register.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -12,7 +14,7 @@ class _LoginPageState extends State<LoginPage> {
   String? _errorMessage;
 
   void _login() {
-    setState(() {
+    setState(() { 
       _errorMessage = null;
     });
 
@@ -42,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Login'),
+          title: const Text('Login'),
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -51,35 +53,35 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Welcome Back text
-              Text(
+              const Text(
                 'Welcome Back',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
               // Username input
               TextField(
                 controller: _usernameController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Username',
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
               // Password input
               TextField(
                 controller: _passwordController,
                 obscureText: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Password',
                   border: OutlineInputBorder(),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
 
               // Error message display (if any)
               if (_errorMessage != null)
@@ -87,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                   padding: const EdgeInsets.only(bottom: 10.0),
                   child: Text(
                     _errorMessage!,
-                    style: TextStyle(color: Colors.red),
+                    style: const TextStyle(color: Colors.red),
                   ),
                 ),
 
@@ -99,24 +101,24 @@ class _LoginPageState extends State<LoginPage> {
                     onPressed: () {
                       // forgot password action
                     },
-                    child: Text('Forgot Password?'),
+                    child: const Text('Forgot Password?'),
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
               // Login button
               ElevatedButton(
                 onPressed: _login,
-                child: Center(
-                    child:
-                        Text('Login', style: TextStyle(color: Colors.black))),
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(double.infinity, 40),
+                  minimumSize: const Size(double.infinity, 40),
                   backgroundColor: Colors.lightBlue,
                 ),
+                child: const Center(
+                    child:
+                        Text('Login', style: TextStyle(color: Colors.black))),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
               // Google Sign-In Button (moved below)
 
@@ -124,15 +126,15 @@ class _LoginPageState extends State<LoginPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('New user?'),
+                  const Text('New user?'),
                   TextButton(
                     onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => RegisterPage()),
+                      MaterialPageRoute(builder: (context) => const RegisterPage()),
                     );
                     },
-                    child: Text(
+                    child: const Text(
                       'Register Now',
                       style: TextStyle(
                         color: Colors.blue,
@@ -147,8 +149,8 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   // Handle Google Sign-In action
                 },
-                icon: Icon(Icons.g_translate, color: Colors.black),
-                label: Text(
+                icon: const Icon(Icons.g_translate, color: Colors.black),
+                label: const Text(
                   'Sign in with Google',
                   style: TextStyle(color: Colors.black),
                 ),
@@ -156,34 +158,34 @@ class _LoginPageState extends State<LoginPage> {
                   backgroundColor:
                       Colors.white, // Background color set to white
                   foregroundColor: Colors.black, // Text and icon color
-                  minimumSize: Size(double.infinity, 50),
+                  minimumSize: const Size(double.infinity, 50),
                   elevation: 0, // Remove shadow effect
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.zero, // Remove circular border
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
 
               // Facebook Sign-In Button (moved below)
               ElevatedButton.icon(
                 onPressed: () {
                   // Handle Facebook Sign-In action
                 },
-                icon: Icon(Icons.facebook, color: Colors.white),
-                label: Text('Sign in with Facebook'),
+                icon: const Icon(Icons.facebook, color: Colors.white),
+                label: const Text('Sign in with Facebook'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor:
                       Colors.blue, // Background color set to solid blue
                   foregroundColor: Colors.white, // Text and icon color
-                  minimumSize: Size(double.infinity, 50),
+                  minimumSize: const Size(double.infinity, 50),
                   elevation: 0, // Remove shadow effect
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.zero, // Remove circular border
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
             ],
           ),
         ),

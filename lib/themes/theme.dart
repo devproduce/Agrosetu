@@ -5,18 +5,16 @@ final lightTheme = ThemeData(
   primaryColor: Colors.green[800],
   colorScheme: ColorScheme.light(
     primary: Colors.green[800]!, // Main color
-    secondary: Colors.brown[500]!, // Accent color
-    background: Colors.green[50], // Light green background
+    secondary: Colors.brown[500]!, // Light green background
     surface: Colors.white, // For cards, containers, etc.
     onPrimary: Colors.white, // Text color on primary elements
-    onSecondary: Colors.black, // Text on secondary elements
-    onBackground: Colors.black, // Text on background
+    onSecondary: Colors.black, // Text on background
     onSurface: Colors.black, // Text on surfaces
   ),
   appBarTheme: AppBarTheme(
     color: Colors.green[800],
-    iconTheme: IconThemeData(color: Colors.white),
-    titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
+    iconTheme: const IconThemeData(color: Colors.white),
+    titleTextStyle: const TextStyle(color: Colors.white, fontSize: 20),
   ),
   textTheme: TextTheme(
     bodyLarge: const TextStyle(color: Colors.black), // Equivalent to bodyText1
@@ -43,18 +41,16 @@ final darkTheme = ThemeData(
   primaryColor: Colors.green[700],
   colorScheme: ColorScheme.dark(
     primary: Colors.green[700]!, // Dark green for primary color
-    secondary: Colors.brown[300]!, // Darker brown as accent color
-    background: Colors.green[900]!, // Dark green background
+    secondary: Colors.brown[300]!, // Dark green background
     surface: Colors.grey[800]!, // For cards, containers, etc.
     onPrimary: Colors.black, // Text color on primary elements
-    onSecondary: Colors.white, // Text on secondary elements
-    onBackground: Colors.white, // Text on background
+    onSecondary: Colors.white, // Text on background
     onSurface: Colors.white, // Text on surfaces
   ),
   appBarTheme: AppBarTheme(
     color: Colors.green[700],
-    iconTheme: IconThemeData(color: Colors.black),
-    titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
+    iconTheme: const IconThemeData(color: Colors.black),
+    titleTextStyle: const TextStyle(color: Colors.white, fontSize: 20),
   ),
   textTheme: TextTheme(
     bodyLarge: const TextStyle(color: Colors.white), // Equivalent to bodyText1

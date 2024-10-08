@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
+
   @override
   _RegisterPageState createState() => _RegisterPageState();
 }
@@ -20,12 +22,10 @@ class _RegisterPageState extends State<RegisterPage> {
       firstDate: DateTime(1900),
       lastDate: DateTime.now(),
     );
-    if (pickedDate != null) {
-      setState(() {
-        _selectedDate = pickedDate;
-      });
+    setState(() {
+      _selectedDate = pickedDate;
+    });
     }
-  }
 
   void _register() {
     // Registration logic can be added here
@@ -42,7 +42,7 @@ class _RegisterPageState extends State<RegisterPage> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Register'),
+          title: const Text('Register'),
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -51,34 +51,34 @@ class _RegisterPageState extends State<RegisterPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'Create an Account',
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 
                 // First Name
                 TextField(
                   controller: _firstNameController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'First Name',
                     border: OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 
                 // Last Name
                 TextField(
                   controller: _lastNameController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Last Name',
                     border: OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 
                 // Date of Birth
                 TextField(
@@ -89,34 +89,34 @@ class _RegisterPageState extends State<RegisterPage> {
                     labelText: _selectedDate == null
                         ? 'Date of Birth'
                         : 'Date of Birth: ${_selectedDate?.toLocal()}'.split(' ')[0],
-                    border: OutlineInputBorder(),
+                    border: const OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 
                 // Email
                 TextField(
                   controller: _emailController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Email',
                     border: OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 
                 // Password
                 TextField(
                   controller: _passwordController,
                   obscureText: true,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Password',
                     border: OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 
                 // Role selection using horizontal Radio buttons
-                Text(
+                const Text(
                   'Select Role:',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
@@ -134,10 +134,10 @@ class _RegisterPageState extends State<RegisterPage> {
                             });
                           },
                         ),
-                        Text('Farmer'),
+                        const Text('Farmer'),
                       ],
                     ),
-                    SizedBox(width: 20), // Space between options
+                    const SizedBox(width: 20), // Space between options
                     Row(
                       children: [
                         Radio<String>(
@@ -149,37 +149,37 @@ class _RegisterPageState extends State<RegisterPage> {
                             });
                           },
                         ),
-                        Text('Contractor'),
+                        const Text('Contractor'),
                       ],
                     ),
                   ],
                 ),
 
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 
                 // Register Button
                 ElevatedButton(
                   onPressed: _register,
-                  child: Center(
-                    child: Text('Register', style: TextStyle(color: Colors.black)),
-                  ),
                   style: ElevatedButton.styleFrom(
-                    minimumSize: Size(double.infinity, 40),
+                    minimumSize: const Size(double.infinity, 40),
                     backgroundColor: Colors.lightBlue,
                   ),
+                  child: const Center(
+                    child: Text('Register', style: TextStyle(color: Colors.black)),
+                  ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 
                 // Already a user? Sign in
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Already a user?'),
+                    const Text('Already a user?'),
                     TextButton(
                       onPressed: () {
                         // Handle sign-in navigation action
                       },
-                      child: Text(
+                      child: const Text(
                         'Sign in',
                         style: TextStyle(
                           color: Colors.blue,

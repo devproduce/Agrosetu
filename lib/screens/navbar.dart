@@ -16,7 +16,7 @@ class Navbar extends StatelessWidget {
           // Display the content of the selected screen
           return IndexedStack(
             index: navProvider.currentIndex,
-            children: [
+            children: const [
               HomeScreen(),
               MyContractsScreen(),
               SupportScreen(),

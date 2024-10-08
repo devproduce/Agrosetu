@@ -6,10 +6,12 @@ import 'cropSection.dart';
 import 'contractSection.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
+      drawer: const Drawer(
         child: HomeScreenDrawer(),
       ),
       appBar: AppBar(
@@ -109,9 +111,9 @@ class HomeScreen extends StatelessWidget {
               child: Consumer<TabProvider>(
                 builder: (context, tabProvider, _) {
                   if (tabProvider.selectedTab == 'Crops') {
-                    return CropSection();
+                    return const CropSection();
                   } else {
-                    return ContractsSection();
+                    return const ContractsSection();
                   }
                 },
               ),

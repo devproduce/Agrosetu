@@ -1,6 +1,4 @@
-import 'package:agrosetu/login/login.dart';
 import 'package:agrosetu/providers/homescreen_provider.dart';
-import 'package:agrosetu/screens/homescreen.dart';
 import 'package:agrosetu/screens/navbar.dart';
 import 'package:agrosetu/themes/theme.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +12,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => NavigationProvider()),
         ChangeNotifierProvider(create: (_) => TabProvider()),
       ],
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }
@@ -29,7 +27,7 @@ class MyApp extends StatelessWidget {
       darkTheme: darkTheme,
       themeMode: ThemeMode.system,
 
-      home: Navbar(), 
+      home: const Navbar(), 
     );
   }
 }
