@@ -1,5 +1,6 @@
+import 'package:agrosetu/login/login.dart'; // Import the LoginPage
+import 'package:agrosetu/screens/navbar.dart'; // Import the Navbar class
 import 'package:agrosetu/providers/homescreen_provider.dart';
-import 'package:agrosetu/screens/navbar.dart';
 import 'package:agrosetu/themes/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -26,8 +27,7 @@ class MyApp extends StatelessWidget {
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: ThemeMode.system,
-
-      home: const Navbar(), 
+      home: const LoginPage(), // Set the LoginPage as the home screen
     );
   }
 }
