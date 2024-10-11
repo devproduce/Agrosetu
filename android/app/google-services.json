@@ -7,6 +7,43 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:845042133047:android:45db24dc537dbb9ce9f7b2",
+        "android_client_info": {
+          "package_name": "com.csi.agrosetu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845042133047-r4l3g84r4rnott39la80kca3eve7eodi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.csi.agrosetu",
+            "certificate_hash": "c8a75294bbe7a24ccc6dc4479a2c8399b493e7ca"
+          }
+        },
+        {
+          "client_id": "845042133047-5knvq5pfvkbu02irk2md7vhe2etnnqo5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC1zSorC2OapDj7hlsEwMZLRW-Y5jBzvQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845042133047-5knvq5pfvkbu02irk2md7vhe2etnnqo5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:845042133047:android:fe2d8c122d23952be9f7b2",
         "android_client_info": {
           "package_name": "com.example.agrosetu"

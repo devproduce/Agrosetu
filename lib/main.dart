@@ -1,21 +1,14 @@
-import 'package:agrosetu/login/login.dart'; // Import the LoginPage
-import 'package:agrosetu/login/navbar.dart'; // Ensure this import points to the correct file
-import 'package:agrosetu/providers/homescreen_provider.dart';
-import 'package:agrosetu/themes/theme.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:agrosetu/firebase_options.dart';
+import 'package:agrosetu/login/login.dart';
 
-void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => UserProvider()),
-        ChangeNotifierProvider(create: (_) => NavigationProvider()),
-        ChangeNotifierProvider(create: (_) => TabProvider()),
-      ],
-      child: const MyApp(),
-    ),
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
   );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -24,10 +17,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: lightTheme,
-      darkTheme: darkTheme,
-      themeMode: ThemeMode.system,
-      home: const LoginPage(), // Set the LoginPage as the home screen
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const LoginPage(),
     );
   }
 }
