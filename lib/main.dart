@@ -1,5 +1,5 @@
 import 'package:agrosetu/login/login.dart'; // Import the LoginPage
-import 'package:agrosetu/screens/navbar.dart'; // Import the Navbar class
+import 'package:agrosetu/login/navbar.dart'; // Ensure this import points to the correct file
 import 'package:agrosetu/providers/homescreen_provider.dart';
 import 'package:agrosetu/themes/theme.dart';
 import 'package:flutter/material.dart';

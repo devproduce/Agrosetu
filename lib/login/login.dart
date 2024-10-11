@@ -13,31 +13,32 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController _passwordController = TextEditingController();
   String? _errorMessage;
 
-  void _login() {
-    setState(() { 
-      _errorMessage = null;
+void _login() {
+  setState(() { 
+    _errorMessage = null;
+  });
+
+  String username = _usernameController.text;
+  String password = _passwordController.text;
+
+  // Simulate user authentication (replace with actual logic)
+  if (username != 'correctUsername') {
+    setState(() {
+      _errorMessage = 'User does not exist';
     });
-
-    String username = _usernameController.text;
-    String password = _passwordController.text;
-
-    // Simulate user authentication (replace with actual logic)
-    if (username != 'correctUsername') {
-      setState(() {
-        _errorMessage = 'User does not exist';
-      });
-    } else if (password != 'correctPassword') {
-      setState(() {
-        _errorMessage = 'Password does not match';
-      });
-    } else {
-      // Proceed with successful login
-      setState(() {
-        _errorMessage =
-            'Login successful'; // Optional: You can remove this line
-      });
-    }
+  } else if (password != 'correctPassword') {
+    setState(() {
+      _errorMessage = 'Password does not match';
+    });
+  } else {
+    // Proceed with successful login
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const Navbar()),
+    );
   }
+}
+
 
   @override
   Widget build(BuildContext context) {
